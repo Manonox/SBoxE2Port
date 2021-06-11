@@ -1,0 +1,17 @@
+﻿@name Test #1
+@persist A B
+
+if( first() ) {
+    A = 2
+    # B = 1
+    
+	#[
+	#[
+    A = 3
+	]#
+    
+    B = -0.1
+	]#
+    
+	print(A, B)
+}
