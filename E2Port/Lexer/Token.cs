@@ -9,8 +9,13 @@ namespace E2Port.Lexer
 	class Token
 	{
 		public TokenType Type { get; set; } = TokenType.Invalid;
-		public Position Start { get; set; }
-		public Position End { get; set; }
+
+		private Position start;
+		public Position Start { get { return start; } set { start = value.Copy(); } }
+
+		private Position end;
+		public Position End { get { return end; } set { end = value.Copy(); } }
+
 		public dynamic Value { get; set; }
 
 		public static Token Invalid { get; } = new Token

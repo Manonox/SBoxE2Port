@@ -1,0 +1,7 @@
+﻿expr		: term ((SUM|SUB) term)*
+
+term		: factor ((MUL|DIV) factor)*
+
+factor		: NUMBER
+			: (ADD|SUB) factor
+			: LPAREN expr RPAREN

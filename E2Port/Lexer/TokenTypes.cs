@@ -9,8 +9,8 @@ namespace E2Port.Lexer
 
 	public enum TokenType
 	{
-		LParenthesis,		// (
-		RParenthesis,		// )
+		LParen,		// (
+		RParen,		// )
 		LBrace,				// {
 		RBrace,				// }
 		LBracket,			// [
@@ -79,6 +79,9 @@ namespace E2Port.Lexer
 
 		FunctionKeyword,
 		ReturnKeyword,
+
+		// Other
+		EndOfFile,
 
 		Invalid,
 	}

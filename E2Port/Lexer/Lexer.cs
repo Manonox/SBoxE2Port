@@ -126,6 +126,8 @@ namespace E2Port.Lexer
 				if (e != null) error_list.Add(e);
 			} while (!Pos.IsEndOfFile());
 
+			token_list.Add(new Token(TokenType.EndOfFile, Pos));
+
 			return (token_list, directives, error_list);
 		}
 
@@ -182,9 +184,9 @@ namespace E2Port.Lexer
 					return (null, null);
 
 				case '(':
-					return (new Token(TokenType.LParenthesis, start, Pos.Copy()), null);
+					return (new Token(TokenType.LParen, start, Pos.Copy()), null);
 				case ')':
-					return (new Token(TokenType.RParenthesis, start, Pos.Copy()), null);
+					return (new Token(TokenType.RParen, start, Pos.Copy()), null);
 				case '{':
 					return (new Token(TokenType.LBrace, start, Pos.Copy()), null);
 				case '}':

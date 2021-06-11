@@ -11,6 +11,7 @@ namespace E2Port
 		Unknown,
 		BadDirective,
 		IllegalChar,
+		InvalidSyntax,
 		MalformedNumber,
 		UnexpectedSymbol,
 		EndOfFile
